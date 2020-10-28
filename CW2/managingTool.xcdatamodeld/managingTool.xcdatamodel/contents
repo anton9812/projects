@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F96" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Assesment" representedClassName="Assesment" syncable="YES" codeGenerationType="class">
+        <attribute name="assesmentName" optional="YES" attributeType="String"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eventID" optional="YES" attributeType="String"/>
+        <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="markAwarded" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="moduleName" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="todayDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="assesmentTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="assesementTask" inverseEntity="Task"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
+        <attribute name="assesment" optional="YES" attributeType="String"/>
+        <attribute name="eventID" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taskCompletion" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taskDueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taskDueReminder" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taskName" optional="YES" attributeType="String"/>
+        <relationship name="assesementTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Assesment" inverseName="assesmentTask" inverseEntity="Assesment"/>
+    </entity>
+    <elements>
+        <element name="Assesment" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Task" positionX="335.97265625" positionY="-126.296875" width="128" height="178"/>
+    </elements>
+</model>
